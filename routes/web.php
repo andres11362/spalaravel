@@ -19,4 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/task', 'TaskController');
+Route::resource('/task', 'TaskController', ['except' => ['create','edit','show']]);
